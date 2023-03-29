@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BF020D0-E43E-40CA-B740-7B1BBA8CB3BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ReportsPrinting</RootNamespace>
+    <AssemblyName>ReportsPrinting</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>\\svictd\WAEC Programs\ICTD\Reports Printing\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Reports Printing</ProductName>
+    <PublisherName>The West African Examinations Council</PublisherName>
+    <SuiteName>WAEC Processing</SuiteName>
+    <ApplicationRevision>34</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>960F98F7FB59B5074784C389F85A4A7ED8C29CFF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Reports Printing_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WaecLibrary">
+      <HintPath>..\..\WaecLibrary\WaecLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AMS\crAmsGabece.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsGabece.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsGabeceNewShifted.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsGabeceNewShifted.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsGabeceNew_Depot.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsGabeceNew_Depot.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsNat3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsNat3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsNat5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsNat5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsNat8.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsNat8.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsNatNew.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsNatNew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsNatNewDepot.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsNatNewDepot.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsWassce.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsWassce.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crpPgabeceAttendanceAndMarkSheet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpPgabeceAttendanceAndMarkSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\Centre.cs">
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Exam.cs">
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExamReports.cs">
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spGetGabeceScCentreByArea_Result.cs">
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspExamReportsSp_GetByExamId_ExamYear_ReportID_Result.cs">
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspExamReports_GetByExamId_ExamYear_Result.cs">
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspExamReports_GetByExamId_Result.cs">
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspExamYears_GetAll_Result.cs">
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspExamYears_GetByExamID_Result.cs">
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\uspTimetable_GetByExamId_ExamYear_Result.cs">
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WaecDBContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WaecDBContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WaecDBContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WaecDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WaecDBContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WaecDBContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PrePrintObj\Reports\crpPrePrintObjsNatNew2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpPrePrintObjsNatNew2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrePrintObj\Reports\crpPrePrintObjsNatNew2_Depot.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpPrePrintObjsNatNew2_Depot.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CollectionOfQuestionPapers1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CollectionOfQuestionPapers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DeliveryOfQuestionPapers1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeliveryOfQuestionPapers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports.Designer.cs">
+      <DependentUpon>FormReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaecCommonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WaecCommonDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AMS\crAmsGabeceNew_Depot.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsGabeceNew_Depot.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crAmsNatNewDepot.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsNatNewDepot.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crAmsWassce3Depot2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsWassce3Depot2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="AMS\crAmsWassce3_Depot.cs">
+      <DependentUpon>crAmsWassce3_Depot.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsWassce3Depot2.cs">
+      <DependentUpon>crAmsWassce3Depot2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsWassce2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsWassce2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AMS\crAmsWassce3Depot1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAmsWassce3Depot1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="AMS\crAmsWassce3Depot1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsWassce3Depot1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="AMS\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AMS\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AMS\frmAmsReportsPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AMS\frmAmsReportsPrinting.Designer.cs">
+      <DependentUpon>frmAmsReportsPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDIParent.designer.cs">
+      <DependentUpon>frmMDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimeTable.Designer.cs">
+      <DependentUpon>frmTimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoggedInUser.cs" />
+    <Compile Include="OtherReports\crpTotalEntriesWASSCESC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpTotalEntriesWASSCESC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OtherReports\frmOtherReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherReports\frmOtherReports.Designer.cs">
+      <DependentUpon>frmOtherReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrePrintObj\frmPrePrintObjPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrePrintObj\frmPrePrintObjPrinting.Designer.cs">
+      <DependentUpon>frmPrePrintObjPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrePrintObj\frmPrePrintObjPrinting2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrePrintObj\frmPrePrintObjPrinting2.designer.cs">
+      <DependentUpon>frmPrePrintObjPrinting2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrePrintObj\Reports\crpPrePrintObjs60E.cs">
+      <DependentUpon>crpPrePrintObjs60E.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrePrintObj\Reports\crpPrePrintObjsGPW4Subject.cs">
+      <DependentUpon>crpPrePrintObjsGPW4Subject.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrePrintObj\Reports\crpPrePrintObjsGPW4.cs">
+      <DependentUpon>crpPrePrintObjsGPW4.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrePrintObj\Reports\crpPrePrintObjsGPW4_Depot.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpPrePrintObjsGPW4_Depot.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrePrintObj\Reports\crpTest.cs">
+      <DependentUpon>crpTest.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AMS\crAmsGabece.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsGabece.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crAmsGabeceNewShifted.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsGabeceNewShifted.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crAmsNat3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsNat3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crAmsNat5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsNat5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crAmsNat8.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsNat8.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crAmsNatNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsNatNew.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crAmsWassce.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsWassce.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crAmsWassce3_Depot.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsWassce3_Depot.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crAmsWassce2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAmsWassce2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\crpPgabeceAttendanceAndMarkSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpPgabeceAttendanceAndMarkSheet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AMS\frmAmsReportsPrinting.resx">
+      <DependentUpon>frmAmsReportsPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDIParent.resx">
+      <DependentUpon>frmMDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimeTable.resx">
+      <DependentUpon>frmTimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherReports\crpTotalEntriesWASSCESC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpTotalEntriesWASSCESC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherReports\frmOtherReports.resx">
+      <DependentUpon>frmOtherReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrePrintObj\frmPrePrintObjPrinting.resx">
+      <DependentUpon>frmPrePrintObjPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrePrintObj\frmPrePrintObjPrinting2.resx">
+      <DependentUpon>frmPrePrintObjPrinting2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrePrintObj\Reports\crpPrePrintObjs60E.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpPrePrintObjs60E.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrePrintObj\Reports\crpPrePrintObjsGPW4Subject.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpPrePrintObjsGPW4Subject.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrePrintObj\Reports\crpPrePrintObjsGPW4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpPrePrintObjsGPW4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrePrintObj\Reports\crpPrePrintObjsGPW4_Depot.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpPrePrintObjsGPW4_Depot.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrePrintObj\Reports\crpPrePrintObjsNatNew2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpPrePrintObjsNatNew2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrePrintObj\Reports\crpPrePrintObjsNatNew2_Depot.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpPrePrintObjsNatNew2_Depot.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrePrintObj\Reports\crpTest.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpTest.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\CollectionOfQuestionPapers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CollectionOfQuestionPapers1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DeliveryOfQuestionPapers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DeliveryOfQuestionPapers1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports.resx">
+      <DependentUpon>FormReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Models\WaecDBContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WaecDBContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\WaecDBContext.edmx.diagram">
+      <DependentUpon>WaecDBContext.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WaecCommonDataSet.xsc">
+      <DependentUpon>WaecCommonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WaecCommonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WaecCommonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WaecCommonDataSet.xss">
+      <DependentUpon>WaecCommonDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports Printing_TemporaryKey.pfx" />
+    <None Include="Resources\header_890x100 no background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WAEC LOGO1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waec-logo-new-background-21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\WaecDBContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WaecDBContext.edmx</DependentUpon>
+      <LastGenOutput>WaecDBContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\WaecDBContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WaecDBContext.edmx</DependentUpon>
+      <LastGenOutput>WaecDBContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WaecUtilsLibrary\Models\WAECBanjulModels.csproj">
+      <Project>{FBF8913C-F6FC-4A95-85B1-ECC8A2DA9062}</Project>
+      <Name>WAECBanjulModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

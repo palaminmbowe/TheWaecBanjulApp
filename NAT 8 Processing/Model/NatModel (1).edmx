@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WaecCommonNatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="uspDeadline_GetByExamID_ExamYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common">
+          <Parameter Name="examID" Type="nvarchar" Mode="In" />
+          <Parameter Name="examYear" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspGetCentre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common">
+          <Parameter Name="examID" Type="nvarchar" Mode="In" />
+          <Parameter Name="centreNumber" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspGetDateTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common" />
+        <Function Name="uspAddCentre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nat">
+          <Parameter Name="examInitial" Type="nvarchar" Mode="In" />
+          <Parameter Name="centreNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="centreName" Type="nvarchar" Mode="In" />
+          <Parameter Name="locationString" Type="nvarchar" Mode="In" />
+          <Parameter Name="ownerString" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspAddCentre2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nat">
+          <Parameter Name="examInitial" Type="nvarchar" Mode="In" />
+          <Parameter Name="centreNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="centreName" Type="nvarchar" Mode="In" />
+          <Parameter Name="locationString" Type="nvarchar" Mode="In" />
+          <Parameter Name="ownerString" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspDeleteCentre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nat">
+          <Parameter Name="examID" Type="nvarchar" Mode="In" />
+          <Parameter Name="examYear" Type="int" Mode="In" />
+          <Parameter Name="centreNumber" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspGetNatCandidate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nat">
+          <Parameter Name="examID" Type="nvarchar" Mode="In" />
+          <Parameter Name="examYear" Type="int" Mode="In" />
+          <Parameter Name="centreNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="indexNumber" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspNatCentresCurrent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nat" />
+        <Function Name="uspNatEntriesByExamIDExamYearCentreNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nat">
+          <Parameter Name="examID" Type="nvarchar" Mode="In" />
+          <Parameter Name="examYear" Type="int" Mode="In" />
+          <Parameter Name="centreNumber" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspNatInsertUpdateDeleteEntry" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nat">
+          <Parameter Name="examID" Type="nvarchar" Mode="In" />
+          <Parameter Name="examYear" Type="int" Mode="In" />
+          <Parameter Name="centreNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="indexNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="candidateName" Type="nvarchar" Mode="In" />
+          <Parameter Name="sexID" Type="int" Mode="In" />
+          <Parameter Name="disabilityID" Type="int" Mode="In" />
+          <Parameter Name="dateOfBirth" Type="datetime" Mode="In" />
+          <Parameter Name="attempts" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="pcName" Type="nvarchar" Mode="In" />
+          <Parameter Name="StatementType" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspNatInsertUpdateDeleteEntry2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nat">
+          <Parameter Name="examID" Type="nvarchar" Mode="In" />
+          <Parameter Name="examYear" Type="int" Mode="In" />
+          <Parameter Name="centreNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="indexNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="candidateName" Type="nvarchar" Mode="In" />
+          <Parameter Name="candidateFirstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="candidateLastName" Type="nvarchar" Mode="In" />
+          <Parameter Name="candidateInitial" Type="nvarchar" Mode="In" />
+          <Parameter Name="sexID" Type="int" Mode="In" />
+          <Parameter Name="disabilityID" Type="int" Mode="In" />
+          <Parameter Name="dateOfBirth" Type="datetime" Mode="In" />
+          <Parameter Name="attempts" Type="int" Mode="In" />
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="pcName" Type="nvarchar" Mode="In" />
+          <Parameter Name="StatementType" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspTotalCandidatesNat8" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="nat" />
+        <EntityContainer Name="WaecCommonNatModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WaecCommonNatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="WaecNatEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="uspNatCentresCurrent" ReturnType="Collection(WaecCommonNatModel.NatCentresCurrent)" />
+          <FunctionImport Name="uspNatEntriesByExamIDExamYearCentreNumber" ReturnType="Collection(WaecCommonNatModel.NatEntries)">
+            <Parameter Name="examID" Mode="In" Type="String" />
+            <Parameter Name="examYear" Mode="In" Type="Int32" />
+            <Parameter Name="centreNumber" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="uspNatInsertUpdateDeleteEntry">
+            <Parameter Name="examID" Mode="In" Type="String" />
+            <Parameter Name="examYear" Mode="In" Type="Int32" />
+            <Parameter Name="centreNumber" Mode="In" Type="String" />
+            <Parameter Name="indexNumber" Mode="In" Type="String" />
+            <Parameter Name="candidateName" Mode="In" Type="String" />
+            <Parameter Name="sexID" Mode="In" Type="Int32" />
+            <Parameter Name="disabilityID" Mode="In" Type="Int32" />
+            <Parameter Name="dateOfBirth" Mode="In" Type="DateTime" />
+            <Parameter Name="attempts" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="pcName" Mode="In" Type="String" />
+            <Parameter Name="StatementType" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="AddNATCentre" ReturnType="Collection(WaecCommonNatModel.uspAddCentre_Result)">
+            <Parameter Name="examInitial" Mode="In" Type="String" />
+            <Parameter Name="centreNumber" Mode="In" Type="String" />
+            <Parameter Name="centreName" Mode="In" Type="String" />
+            <Parameter Name="locationString" Mode="In" Type="String" />
+            <Parameter Name="ownerString" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="uspTotalCandidatesNat8" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="DeleteNatCentre">
+            <Parameter Name="examID" Mode="In" Type="String" />
+            <Parameter Name="examYear" Mode="In" Type="Int32" />
+            <Parameter Name="centreNumber" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="fAddNatCentre">
+            <Parameter Name="examInitial" Mode="In" Type="String" />
+            <Parameter Name="centreNumber" Mode="In" Type="String" />
+            <Parameter Name="centreName" Mode="In" Type="String" />
+            <Parameter Name="locationString" Mode="In" Type="String" />
+            <Parameter Name="ownerString" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="fAddCentre2" ReturnType="Collection(Int32)">
+            <Parameter Name="examInitial" Mode="In" Type="String" />
+            <Parameter Name="centreNumber" Mode="In" Type="String" />
+            <Parameter Name="centreName" Mode="In" Type="String" />
+            <Parameter Name="locationString" Mode="In" Type="String" />
+            <Parameter Name="ownerString" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="fGetCentre" ReturnType="Collection(WaecCommonNatModel.uspGetCentre_Result)">
+            <Parameter Name="examID" Mode="In" Type="String" />
+            <Parameter Name="centreNumber" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="fDeadline_GetByExamID_ExamYear" ReturnType="Collection(WaecCommonNatModel.uspDeadline_GetByExamID_ExamYear_Result)">
+            <Parameter Name="examID" Mode="In" Type="String" />
+            <Parameter Name="examYear" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="fGetNatCandidate" ReturnType="Collection(WaecCommonNatModel.uspGetNatCandidate_Result)">
+            <Parameter Name="examID" Mode="In" Type="String" />
+            <Parameter Name="examYear" Mode="In" Type="Int32" />
+            <Parameter Name="centreNumber" Mode="In" Type="String" />
+            <Parameter Name="indexNumber" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="fServerGetDateTime" ReturnType="Collection(WaecCommonNatModel.ServerGetDateTime)" />
+          <FunctionImport Name="fNatInsertUpdateDeleteEntry2">
+            <Parameter Name="examID" Mode="In" Type="String" />
+            <Parameter Name="examYear" Mode="In" Type="Int32" />
+            <Parameter Name="centreNumber" Mode="In" Type="String" />
+            <Parameter Name="indexNumber" Mode="In" Type="String" />
+            <Parameter Name="candidateName" Mode="In" Type="String" />
+            <Parameter Name="candidateFirstName" Mode="In" Type="String" />
+            <Parameter Name="candidateLastName" Mode="In" Type="String" />
+            <Parameter Name="candidateInitial" Mode="In" Type="String" />
+            <Parameter Name="sexID" Mode="In" Type="Int32" />
+            <Parameter Name="disabilityID" Mode="In" Type="Int32" />
+            <Parameter Name="dateOfBirth" Mode="In" Type="DateTime" />
+            <Parameter Name="attempts" Mode="In" Type="Int32" />
+            <Parameter Name="userName" Mode="In" Type="String" />
+            <Parameter Name="pcName" Mode="In" Type="String" />
+            <Parameter Name="StatementType" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="NatCentresCurrent">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ExamName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ExamInitial" Nullable="false" />
+          <Property Type="String" Name="ExamShortName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CentreNumber" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="CentreName" Nullable="false" MaxLength="150" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="NatEntries">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ExamName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ExamInitial" Nullable="false" />
+          <Property Type="String" Name="ExamShortName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+          <Property Type="String" Name="CentreNumber" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="IndexNumber" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="CandidateName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="SexID" Nullable="false" />
+          <Property Type="Int32" Name="DisabilityID" Nullable="false" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Attempts" Nullable="false" />
+          <Property Type="String" Name="CentreName" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="SexName" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="SexShortName" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="DisabilityName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="RegionID" Nullable="false" />
+          <Property Type="Int32" Name="AreaID" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="false" />
+          <Property Type="Int32" Name="SchoolTypeID" Nullable="false" />
+          <Property Type="String" Name="RegionName" Nullable="false" />
+          <Property Type="String" Name="AreaName" Nullable="false" />
+          <Property Type="String" Name="LocationName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SchoolType" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="CandidateEntryBegin" Nullable="true" />
+          <Property Type="DateTime" Name="CandidateEntryEnd" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspAddCentre_Result">
+          <Property Type="Int32" Name="Return_Value" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspGetCentre_Result">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="CentreNumber" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="CentreName" Nullable="false" MaxLength="150" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="Int32" Name="RegionID" Nullable="false" />
+          <Property Type="Int32" Name="AreaID" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="false" />
+          <Property Type="Int32" Name="SchoolTypeID" Nullable="false" />
+          <Property Type="String" Name="DepotID" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="CentreVenue" Nullable="true" />
+          <Property Type="DateTime" Name="RegistrationDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DeregistrationDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="TS" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="uspDeadline_GetByExamID_ExamYear_Result">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+          <Property Type="DateTime" Name="CandidateModificationBegin" Nullable="true" />
+          <Property Type="DateTime" Name="CandidateModificationEnd" Nullable="true" />
+          <Property Type="DateTime" Name="MarksKeyingBegin" Nullable="true" />
+          <Property Type="DateTime" Name="MarkskeyingEnd" Nullable="true" />
+          <Property Type="DateTime" Name="CandidateEntryBegin" Nullable="true" />
+          <Property Type="DateTime" Name="CandidateEntryEnd" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspGetNatCandidate_Result">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+          <Property Type="String" Name="CentreNumber" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="IndexNumber" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="CandidateLastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CandidateFirstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CandidateInitial" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="SexID" Nullable="false" />
+          <Property Type="Int32" Name="DisabilityID" Nullable="false" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="true" />
+          <Property Type="Int32" Name="Attempts" Nullable="false" />
+          <Property Type="DateTime" Name="TS" Nullable="true" Precision="23" />
+          <Property Type="String" Name="UserName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PcName" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Modified" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="ServerGetDateTime">
+          <Property Type="DateTime" Name="CurrentDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="CurrentYear" Nullable="true" />
+          <Property Type="Int32" Name="CurrentMonth" Nullable="true" />
+          <Property Type="Int32" Name="currentDay" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WaecCommonNatModelStoreContainer" CdmEntityContainer="WaecNatEntities" >
+          <FunctionImportMapping FunctionImportName="uspNatCentresCurrent" FunctionName="WaecCommonNatModel.Store.uspNatCentresCurrent">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonNatModel.NatCentresCurrent">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="ExamName" ColumnName="ExamName" />
+                <ScalarProperty Name="ExamInitial" ColumnName="ExamInitial" />
+                <ScalarProperty Name="ExamShortName" ColumnName="ExamShortName" />
+                <ScalarProperty Name="CentreNumber" ColumnName="CentreNumber" />
+                <ScalarProperty Name="CentreName" ColumnName="CentreName" />
+                <ScalarProperty Name="ExamYear" ColumnName="ExamYear" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspNatEntriesByExamIDExamYearCentreNumber" FunctionName="WaecCommonNatModel.Store.uspNatEntriesByExamIDExamYearCentreNumber">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonNatModel.NatEntries">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="ExamName" ColumnName="ExamName" />
+                <ScalarProperty Name="ExamInitial" ColumnName="ExamInitial" />
+                <ScalarProperty Name="ExamShortName" ColumnName="ExamShortName" />
+                <ScalarProperty Name="ExamYear" ColumnName="ExamYear" />
+                <ScalarProperty Name="CentreNumber" ColumnName="CentreNumber" />
+                <ScalarProperty Name="IndexNumber" ColumnName="IndexNumber" />
+                <ScalarProperty Name="CandidateName" ColumnName="CandidateName" />
+                <ScalarProperty Name="SexID" ColumnName="SexID" />
+                <ScalarProperty Name="DisabilityID" ColumnName="DisabilityID" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Attempts" ColumnName="Attempts" />
+                <ScalarProperty Name="CentreName" ColumnName="CentreName" />
+                <ScalarProperty Name="SexName" ColumnName="SexName" />
+                <ScalarProperty Name="SexShortName" ColumnName="SexShortName" />
+                <ScalarProperty Name="DisabilityName" ColumnName="DisabilityName" />
+                <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="SchoolTypeID" ColumnName="SchoolTypeID" />
+                <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+                <ScalarProperty Name="SchoolType" ColumnName="SchoolType" />
+                <ScalarProperty Name="CandidateEntryBegin" ColumnName="CandidateEntryBegin" />
+                <ScalarProperty Name="CandidateEntryEnd" ColumnName="CandidateEntryEnd" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspNatInsertUpdateDeleteEntry" FunctionName="WaecCommonNatModel.Store.uspNatInsertUpdateDeleteEntry" />
+          <FunctionImportMapping FunctionImportName="AddNATCentre" FunctionName="WaecCommonNatModel.Store.uspAddCentre">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonNatModel.uspAddCentre_Result">
+                <ScalarProperty Name="Return_Value" ColumnName="Return Value" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspTotalCandidatesNat8" FunctionName="WaecCommonNatModel.Store.uspTotalCandidatesNat8" />
+          <FunctionImportMapping FunctionImportName="DeleteNatCentre" FunctionName="WaecCommonNatModel.Store.uspDeleteCentre" />
+          <FunctionImportMapping FunctionImportName="fAddNatCentre" FunctionName="WaecCommonNatModel.Store.uspAddCentre" />
+          <FunctionImportMapping FunctionImportName="fAddCentre2" FunctionName="WaecCommonNatModel.Store.uspAddCentre2" />
+          <FunctionImportMapping FunctionImportName="fGetCentre" FunctionName="WaecCommonNatModel.Store.uspGetCentre">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonNatModel.uspGetCentre_Result">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="CentreNumber" ColumnName="CentreNumber" />
+                <ScalarProperty Name="CentreName" ColumnName="CentreName" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="SchoolTypeID" ColumnName="SchoolTypeID" />
+                <ScalarProperty Name="DepotID" ColumnName="DepotID" />
+                <ScalarProperty Name="CentreVenue" ColumnName="CentreVenue" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="DeregistrationDate" ColumnName="DeregistrationDate" />
+                <ScalarProperty Name="TS" ColumnName="TS" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="fDeadline_GetByExamID_ExamYear" FunctionName="WaecCommonNatModel.Store.uspDeadline_GetByExamID_ExamYear">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonNatModel.uspDeadline_GetByExamID_ExamYear_Result">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="ExamYear" ColumnName="ExamYear" />
+                <ScalarProperty Name="CandidateModificationBegin" ColumnName="CandidateModificationBegin" />
+                <ScalarProperty Name="CandidateModificationEnd" ColumnName="CandidateModificationEnd" />
+                <ScalarProperty Name="MarksKeyingBegin" ColumnName="MarksKeyingBegin" />
+                <ScalarProperty Name="MarkskeyingEnd" ColumnName="MarkskeyingEnd" />
+                <ScalarProperty Name="CandidateEntryBegin" ColumnName="CandidateEntryBegin" />
+                <ScalarProperty Name="CandidateEntryEnd" ColumnName="CandidateEntryEnd" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="fGetNatCandidate" FunctionName="WaecCommonNatModel.Store.uspGetNatCandidate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonNatModel.uspGetNatCandidate_Result">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="ExamYear" ColumnName="ExamYear" />
+                <ScalarProperty Name="CentreNumber" ColumnName="CentreNumber" />
+                <ScalarProperty Name="IndexNumber" ColumnName="IndexNumber" />
+                <ScalarProperty Name="CandidateLastName" ColumnName="CandidateLastName" />
+                <ScalarProperty Name="CandidateFirstName" ColumnName="CandidateFirstName" />
+                <ScalarProperty Name="CandidateInitial" ColumnName="CandidateInitial" />
+                <ScalarProperty Name="SexID" ColumnName="SexID" />
+                <ScalarProperty Name="DisabilityID" ColumnName="DisabilityID" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Attempts" ColumnName="Attempts" />
+                <ScalarProperty Name="TS" ColumnName="TS" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PcName" ColumnName="PcName" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="fServerGetDateTime" FunctionName="WaecCommonNatModel.Store.uspGetDateTime">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonNatModel.ServerGetDateTime">
+                <ScalarProperty Name="CurrentDate" ColumnName="CurrentDate" />
+                <ScalarProperty Name="CurrentYear" ColumnName="CurrentYear" />
+                <ScalarProperty Name="CurrentMonth" ColumnName="CurrentMonth" />
+                <ScalarProperty Name="currentDay" ColumnName="currentDay" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="fNatInsertUpdateDeleteEntry2" FunctionName="WaecCommonNatModel.Store.uspNatInsertUpdateDeleteEntry2" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

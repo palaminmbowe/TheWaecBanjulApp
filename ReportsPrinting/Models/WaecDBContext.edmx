@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WaecCommonDBContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="spGetGabeceScCentreByArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common">
+          <Parameter Name="AreaID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspCentre_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common" />
+        <Function Name="uspExam_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common" />
+        <Function Name="uspExamReports_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common" />
+        <Function Name="uspExamReports_GetByExamId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common">
+          <Parameter Name="ExamID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspExamReports_GetByExamId_ExamYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common">
+          <Parameter Name="ExamID" Type="nvarchar" Mode="In" />
+          <Parameter Name="ExamYear" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspExamReportsSp_GetByExamId_ExamYear_ReportID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common">
+          <Parameter Name="ExamID" Type="nvarchar" Mode="In" />
+          <Parameter Name="ExamYear" Type="int" Mode="In" />
+          <Parameter Name="ReportID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspExamYears_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common" />
+        <Function Name="uspExamYears_GetByExamID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common">
+          <Parameter Name="ExamId" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspTimetable_GetByExamId_ExamYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="common">
+          <Parameter Name="ExamID" Type="nvarchar" Mode="In" />
+          <Parameter Name="ExamYear" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="WaecCommonDBContextStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WaecCommonDBContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="WaecCommonDBEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="uspCentre_GetAll" ReturnType="Collection(WaecCommonDBContext.Centre)" />
+          <FunctionImport Name="uspExam_GetAll" ReturnType="Collection(WaecCommonDBContext.Exam)" />
+          <FunctionImport Name="uspExamYears_GetAll" ReturnType="Collection(WaecCommonDBContext.uspExamYears_GetAll_Result)" />
+          <FunctionImport Name="uspExamYears_GetByExamID" ReturnType="Collection(WaecCommonDBContext.uspExamYears_GetByExamID_Result)">
+          <Parameter Name="ExamId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="uspTimetable_GetByExamId_ExamYear" ReturnType="Collection(WaecCommonDBContext.uspTimetable_GetByExamId_ExamYear_Result)">
+            <Parameter Name="ExamID" Mode="In" Type="String" />
+            <Parameter Name="ExamYear" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="uspExamReports_GetAll" ReturnType="Collection(WaecCommonDBContext.ExamReports)" />
+          <FunctionImport Name="uspExamReportsSp_GetByExamId_ExamYear_ReportID" ReturnType="Collection(WaecCommonDBContext.uspExamReportsSp_GetByExamId_ExamYear_ReportID_Result)">
+            <Parameter Name="ExamID" Mode="In" Type="String" />
+            <Parameter Name="ExamYear" Mode="In" Type="Int32" />
+            <Parameter Name="ReportID" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spGetGabeceScCentreByArea_Result">
+          <Property Type="Int32" Name="AreaID" Nullable="false" />
+          <Property Type="String" Name="AreaName" Nullable="false" />
+          <Property Type="String" Name="CentreNumber" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="CentreName" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="Centre">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="CentreNumber" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="CentreName" Nullable="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="Int32" Name="RegionID" Nullable="false" />
+          <Property Type="Int32" Name="AreaID" Nullable="false" />
+          <Property Type="Int32" Name="LocationID" Nullable="false" />
+          <Property Type="Int32" Name="SchoolTypeID" Nullable="false" />
+          <Property Type="String" Name="DepotID" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="CentreVenue" Nullable="true" />
+          <Property Type="DateTime" Name="RegistrationDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DeregistrationDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="TS" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="Exam">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="ExamInitial" Nullable="false" />
+          <Property Type="String" Name="ExamName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ExamShortName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="uspExamReports_GetByExamId_Result">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ExamName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ExamInitial" Nullable="false" />
+          <Property Type="String" Name="ExamShortName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+          <Property Type="String" Name="ReportName" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="ReportAvailable" Nullable="false" />
+          <Property Type="String" Name="ReportViewName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ReportSpName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="TS" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="uspExamReports_GetByExamId_ExamYear_Result">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ExamName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ExamInitial" Nullable="false" />
+          <Property Type="String" Name="ExamShortName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+          <Property Type="Int32" Name="ReportID" Nullable="false" />
+          <Property Type="String" Name="ReportName" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="ReportAvailable" Nullable="false" />
+          <Property Type="String" Name="ReportViewName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ReportSpName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="TS" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="uspExamYears_GetAll_Result">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspExamYears_GetByExamID_Result">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="uspTimetable_GetByExamId_ExamYear_Result">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+          <Property Type="String" Name="CentreNumber" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="SubjectName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="SubjectShortName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Pack50" Nullable="false" />
+          <Property Type="Int32" Name="Pack15" Nullable="false" />
+          <Property Type="Int32" Name="Pack10" Nullable="false" />
+          <Property Type="Int32" Name="NumberOfCandidates" Nullable="false" />
+          <Property Type="Int32" Name="NumberOfPapers" Nullable="false" />
+          <Property Type="String" Name="ShortSubjectCode" Nullable="false" MaxLength="3" />
+          <Property Type="Int32" Name="PaperNumber" Nullable="false" />
+          <Property Type="String" Name="PaperTypeName" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Date" Nullable="false" Precision="23" />
+          <Property Type="Time" Name="StartTime" Nullable="false" />
+          <Property Type="Time" Name="EndTime" Nullable="false" />
+          <Property Type="DateTime" Name="DeliveryDate" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="CombinedPaper" Nullable="false" />
+          <Property Type="Int32" Name="TadSubjectCode" Nullable="false" />
+          <Property Type="String" Name="CentreVenue" Nullable="true" />
+          <Property Type="String" Name="ExamName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ExamInitial" Nullable="false" />
+          <Property Type="String" Name="YearStarted" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="ExamShortName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="ExamReports">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ExamName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ExamInitial" Nullable="false" />
+          <Property Type="String" Name="ExamShortName" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+          <Property Type="Int32" Name="ReportID" Nullable="false" />
+          <Property Type="String" Name="ReportName" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="ReportAvailable" Nullable="false" />
+          <Property Type="String" Name="ReportViewName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ReportSpName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="TS" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="uspExamReportsSp_GetByExamId_ExamYear_ReportID_Result">
+          <Property Type="String" Name="ExamID" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="ExamYear" Nullable="false" />
+          <Property Type="String" Name="ReportViewName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ReportSpName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ReportPath" Nullable="true" MaxLength="300" />
+          <Property Type="Boolean" Name="ReportViewerAvailable" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WaecCommonDBContextStoreContainer" CdmEntityContainer="WaecCommonDBEntities" >
+          <FunctionImportMapping FunctionImportName="uspCentre_GetAll" FunctionName="WaecCommonDBContext.Store.uspCentre_GetAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonDBContext.Centre">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="CentreNumber" ColumnName="CentreNumber" />
+                <ScalarProperty Name="CentreName" ColumnName="CentreName" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="SchoolTypeID" ColumnName="SchoolTypeID" />
+                <ScalarProperty Name="DepotID" ColumnName="DepotID" />
+                <ScalarProperty Name="CentreVenue" ColumnName="CentreVenue" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="DeregistrationDate" ColumnName="DeregistrationDate" />
+                <ScalarProperty Name="TS" ColumnName="TS" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspExam_GetAll" FunctionName="WaecCommonDBContext.Store.uspExam_GetAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonDBContext.Exam">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="ExamInitial" ColumnName="ExamInitial" />
+                <ScalarProperty Name="ExamName" ColumnName="ExamName" />
+                <ScalarProperty Name="ExamShortName" ColumnName="ExamShortName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspExamYears_GetAll" FunctionName="WaecCommonDBContext.Store.uspExamYears_GetAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonDBContext.uspExamYears_GetAll_Result">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="ExamYear" ColumnName="ExamYear" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspExamYears_GetByExamID" FunctionName="WaecCommonDBContext.Store.uspExamYears_GetByExamID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonDBContext.uspExamYears_GetByExamID_Result">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="ExamYear" ColumnName="ExamYear" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspTimetable_GetByExamId_ExamYear" FunctionName="WaecCommonDBContext.Store.uspTimetable_GetByExamId_ExamYear">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonDBContext.uspTimetable_GetByExamId_ExamYear_Result">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="ExamYear" ColumnName="ExamYear" />
+                <ScalarProperty Name="CentreNumber" ColumnName="CentreNumber" />
+                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+                <ScalarProperty Name="SubjectShortName" ColumnName="SubjectShortName" />
+                <ScalarProperty Name="Pack50" ColumnName="Pack50" />
+                <ScalarProperty Name="Pack15" ColumnName="Pack15" />
+                <ScalarProperty Name="Pack10" ColumnName="Pack10" />
+                <ScalarProperty Name="NumberOfCandidates" ColumnName="NumberOfCandidates" />
+                <ScalarProperty Name="NumberOfPapers" ColumnName="NumberOfPapers" />
+                <ScalarProperty Name="ShortSubjectCode" ColumnName="ShortSubjectCode" />
+                <ScalarProperty Name="PaperNumber" ColumnName="PaperNumber" />
+                <ScalarProperty Name="PaperTypeName" ColumnName="PaperTypeName" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="CombinedPaper" ColumnName="CombinedPaper" />
+                <ScalarProperty Name="TadSubjectCode" ColumnName="TadSubjectCode" />
+                <ScalarProperty Name="CentreVenue" ColumnName="CentreVenue" />
+                <ScalarProperty Name="ExamName" ColumnName="ExamName" />
+                <ScalarProperty Name="ExamInitial" ColumnName="ExamInitial" />
+                <ScalarProperty Name="YearStarted" ColumnName="YearStarted" />
+                <ScalarProperty Name="ExamShortName" ColumnName="ExamShortName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspExamReports_GetAll" FunctionName="WaecCommonDBContext.Store.uspExamReports_GetAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonDBContext.ExamReports">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="ExamName" ColumnName="ExamName" />
+                <ScalarProperty Name="ExamInitial" ColumnName="ExamInitial" />
+                <ScalarProperty Name="ExamShortName" ColumnName="ExamShortName" />
+                <ScalarProperty Name="ExamYear" ColumnName="ExamYear" />
+                <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+                <ScalarProperty Name="ReportName" ColumnName="ReportName" />
+                <ScalarProperty Name="ReportAvailable" ColumnName="ReportAvailable" />
+                <ScalarProperty Name="ReportViewName" ColumnName="ReportViewName" />
+                <ScalarProperty Name="ReportSpName" ColumnName="ReportSpName" />
+                <ScalarProperty Name="TS" ColumnName="TS" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspExamReportsSp_GetByExamId_ExamYear_ReportID" FunctionName="WaecCommonDBContext.Store.uspExamReportsSp_GetByExamId_ExamYear_ReportID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WaecCommonDBContext.uspExamReportsSp_GetByExamId_ExamYear_ReportID_Result">
+                <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+                <ScalarProperty Name="ExamYear" ColumnName="ExamYear" />
+                <ScalarProperty Name="ReportViewName" ColumnName="ReportViewName" />
+                <ScalarProperty Name="ReportSpName" ColumnName="ReportSpName" />
+                <ScalarProperty Name="ReportPath" ColumnName="ReportPath" />
+                <ScalarProperty Name="ReportViewerAvailable" ColumnName="ReportViewerAvailable" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

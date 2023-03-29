@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CSDPrintingDataSet" targetNamespace="http://tempuri.org/CSDPrintingDataSet.xsd" xmlns:mstns="http://tempuri.org/CSDPrintingDataSet.xsd" xmlns="http://tempuri.org/CSDPrintingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CSDPrintingConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CSDPrintingConnectionString (Settings)" PropertyReference="ApplicationSettings.Reports_Printing.Properties.Settings.GlobalReference.Default.CSDPrintingConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryPrePrintObjWassceTableAdapter" GeneratorDataComponentClassName="qryPrePrintObjWassceTableAdapter" Name="qryPrePrintObjWassce" UserDataComponentName="qryPrePrintObjWassceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CSDPrintingConnectionString (Settings)" DbObjectName="qryPrePrintObjWassce" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [YEAR], CsdSubjCode, CentNo, ExaminationNumber, IndexNo, CandName, Sex, PapType, Description, Examination FROM qryPrePrintObjWassce</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="YEAR" DataSetColumn="YEAR" />
+              <Mapping SourceColumn="CsdSubjCode" DataSetColumn="CsdSubjCode" />
+              <Mapping SourceColumn="CentNo" DataSetColumn="CentNo" />
+              <Mapping SourceColumn="ExaminationNumber" DataSetColumn="ExaminationNumber" />
+              <Mapping SourceColumn="IndexNo" DataSetColumn="IndexNo" />
+              <Mapping SourceColumn="CandName" DataSetColumn="CandName" />
+              <Mapping SourceColumn="Sex" DataSetColumn="Sex" />
+              <Mapping SourceColumn="PapType" DataSetColumn="PapType" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Examination" DataSetColumn="Examination" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CSDPrintingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CSDPrintingDataSet" msprop:Generator_UserDSName="CSDPrintingDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryPrePrintObjWassce" msprop:Generator_TableClassName="qryPrePrintObjWassceDataTable" msprop:Generator_TableVarName="tableqryPrePrintObjWassce" msprop:Generator_TablePropName="qryPrePrintObjWassce" msprop:Generator_RowDeletingName="qryPrePrintObjWassceRowDeleting" msprop:Generator_RowChangingName="qryPrePrintObjWassceRowChanging" msprop:Generator_RowEvHandlerName="qryPrePrintObjWassceRowChangeEventHandler" msprop:Generator_RowDeletedName="qryPrePrintObjWassceRowDeleted" msprop:Generator_UserTableName="qryPrePrintObjWassce" msprop:Generator_RowChangedName="qryPrePrintObjWassceRowChanged" msprop:Generator_RowEvArgName="qryPrePrintObjWassceRowChangeEvent" msprop:Generator_RowClassName="qryPrePrintObjWassceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="YEAR" msprop:Generator_ColumnVarNameInTable="columnYEAR" msprop:Generator_ColumnPropNameInRow="YEAR" msprop:Generator_ColumnPropNameInTable="YEARColumn" msprop:Generator_UserColumnName="YEAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CsdSubjCode" msprop:Generator_ColumnVarNameInTable="columnCsdSubjCode" msprop:Generator_ColumnPropNameInRow="CsdSubjCode" msprop:Generator_ColumnPropNameInTable="CsdSubjCodeColumn" msprop:Generator_UserColumnName="CsdSubjCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CentNo" msprop:Generator_ColumnVarNameInTable="columnCentNo" msprop:Generator_ColumnPropNameInRow="CentNo" msprop:Generator_ColumnPropNameInTable="CentNoColumn" msprop:Generator_UserColumnName="CentNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExaminationNumber" msprop:Generator_ColumnVarNameInTable="columnExaminationNumber" msprop:Generator_ColumnPropNameInRow="ExaminationNumber" msprop:Generator_ColumnPropNameInTable="ExaminationNumberColumn" msprop:Generator_UserColumnName="ExaminationNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndexNo" msprop:Generator_ColumnVarNameInTable="columnIndexNo" msprop:Generator_ColumnPropNameInRow="IndexNo" msprop:Generator_ColumnPropNameInTable="IndexNoColumn" msprop:Generator_UserColumnName="IndexNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CandName" msprop:Generator_ColumnVarNameInTable="columnCandName" msprop:Generator_ColumnPropNameInRow="CandName" msprop:Generator_ColumnPropNameInTable="CandNameColumn" msprop:Generator_UserColumnName="CandName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sex" msprop:Generator_ColumnVarNameInTable="columnSex" msprop:Generator_ColumnPropNameInRow="Sex" msprop:Generator_ColumnPropNameInTable="SexColumn" msprop:Generator_UserColumnName="Sex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PapType" msprop:Generator_ColumnVarNameInTable="columnPapType" msprop:Generator_ColumnPropNameInRow="PapType" msprop:Generator_ColumnPropNameInTable="PapTypeColumn" msprop:Generator_UserColumnName="PapType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Examination" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnExamination" msprop:Generator_ColumnPropNameInRow="Examination" msprop:Generator_ColumnPropNameInTable="ExaminationColumn" msprop:Generator_UserColumnName="Examination" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

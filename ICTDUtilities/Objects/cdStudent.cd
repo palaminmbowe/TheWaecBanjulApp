@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ICTDUtilities.Objects.Candidate">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="centNo" Hidden="true" />
+      <Field Name="dateOfBirth" Hidden="true" />
+      <Field Name="disabilityCode" Hidden="true" />
+      <Field Name="examType" Hidden="true" />
+      <Field Name="examYear" Hidden="true" />
+      <Field Name="indexNo" Hidden="true" />
+      <Field Name="subjects" Hidden="true" />
+      <Field Name="totalSubjects" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>dAFAAGABAAAQBAgAgAQAAAAESAQQAQAEQCEABGEEQAA=</HashCode>
+      <FileName>Objects\Candidate.cs</FileName>
+      <NewMemberFileName>Objects\candidate.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.CandidateGabece">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAABBAAAAQAAAAASAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\CandidateGabece.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.Subject">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAQAAAAEAAAQAAAAEAAAAAA=</HashCode>
+      <FileName>Objects\Subject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.Sex">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIAAgAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Sex.cs</FileName>
+      <NewMemberFileName>Objects\sex.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.Disability">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIAAgAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Disability.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.SchoolOfChoice">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAIAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\SchoolOfChoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.Common">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEACAAAAAggAAQAQAAEAAACAAAAAwAAEAAAABABA=</HashCode>
+      <FileName>Objects\Common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.School">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAgAAAAIAAgAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.Deadline">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAQIAAAcCgAAGAACAAAAAgAA=</HashCode>
+      <FileName>Objects\Deadline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ICTDUtilities.ExamType" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAABAAAAAAAAAAACAAAAEAQAAAAAAAE=</HashCode>
+      <FileName>Objects\ExamType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

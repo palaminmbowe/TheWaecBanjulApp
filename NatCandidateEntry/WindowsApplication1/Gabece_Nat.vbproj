@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F106EEE-73AB-48BA-B76F-6C4E3A65C420}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>GABECE_NAT.My.MyApplication</StartupObject>
+    <RootNamespace>GABECE_NAT</RootNamespace>
+    <AssemblyName>WAEC_GABECE-NAT-Entry</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\server1\WAEC Programs\Candidate Entry\Gabece-Nat\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <UpdateUrl>\\server1\WAEC Programs\Candidate Entry\Gabece-Nat\</UpdateUrl>
+    <ProductName>NAT Candidate Entry</ProductName>
+    <PublisherName>The West African Examinations Council</PublisherName>
+    <SuiteName>WAEC Candidate Entry</SuiteName>
+    <WebPage>publish.htm</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>37</ApplicationRevision>
+    <ApplicationVersion>2.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WAEC_GABECE-NAT-Entry.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WAEC_GABECE-NAT-Entry.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Waec.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4803D0A0E81994C3311C1F873AB6608620DC65AD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Gabece_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>WAEC_GABECE-NAT-Entry.xml</DocumentationFile>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\WindowsApplication1.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>WAEC_GABECE-NAT-Entry.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\WindowsApplication1.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Gabece Release x86|AnyCPU'">
+    <OutputPath>bin\Gabece Release x86\</OutputPath>
+    <DocumentationFile>WAEC_GABECE-NAT-Entry.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Gabece Release x86|x86'">
+    <OutputPath>bin\x86\Gabece Release x86\</OutputPath>
+    <DocumentationFile>WAEC_GABECE-NAT-Entry.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WaecLibrary">
+      <HintPath>..\..\WaecLibrary\WaecLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="ConClass.vb" />
+    <Compile Include="FrmMain.designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MyModule1.vb" />
+    <Compile Include="NAT\Forms\frmNatTools.Designer.vb">
+      <DependentUpon>frmNatTools.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\Forms\frmNatTools.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G3\frmNatCentreChangeG3.Designer.vb">
+      <DependentUpon>frmNatCentreChangeG3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G3\frmNatCentreChangeG3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G3\frmNatCentreRemoveG3.Designer.vb">
+      <DependentUpon>frmNatCentreRemoveG3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G3\frmNatCentreRemoveG3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G3\frmNatG3.Designer.vb">
+      <DependentUpon>frmNatG3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G3\frmNatG3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G3\frmNATSetupG3.Designer.vb">
+      <DependentUpon>frmNATSetupG3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G3\frmNATSetupG3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G5\frmNatCentreChangeG5.Designer.vb">
+      <DependentUpon>frmNatCentreChangeG5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G5\frmNatCentreChangeG5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G5\frmNatCentreRemoveG5.Designer.vb">
+      <DependentUpon>frmNatCentreRemoveG5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G5\frmNatCentreRemoveG5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G5\frmNatG5.Designer.vb">
+      <DependentUpon>frmNatG5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G5\frmNatG5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G5\frmNATSetupG5.Designer.vb">
+      <DependentUpon>frmNATSetupG5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G5\frmNATSetupG5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G8\frmNat.designer.vb">
+      <DependentUpon>frmNat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G8\frmNat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G8\frmNatCentreChange.Designer.vb">
+      <DependentUpon>frmNatCentreChange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G8\frmNatCentreChange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G8\frmNatCentreRemove.Designer.vb">
+      <DependentUpon>frmNatCentreRemove.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G8\frmNatCentreRemove.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\G8\frmNATSetup.Designer.vb">
+      <DependentUpon>frmNATSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\G8\frmNATSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\Reports\frmNatCandidateReport.Designer.vb">
+      <DependentUpon>frmNatCandidateReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NAT\Reports\frmNatCandidateReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NAT\Reports\rptCandidates1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCandidates.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OutstandingDG.designer.vb">
+      <DependentUpon>OutstandingDG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OutstandingDG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="WASSCE\Reports\crpWassceConfirmation.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpWassceConfirmation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WASSCE\Reports\frmWassceConfirmation.Designer.vb">
+      <DependentUpon>frmWassceConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WASSCE\Reports\frmWassceConfirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\Forms\frmNatTools.resx">
+      <DependentUpon>frmNatTools.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G3\frmNatCentreChangeG3.resx">
+      <DependentUpon>frmNatCentreChangeG3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G3\frmNatCentreRemoveG3.resx">
+      <DependentUpon>frmNatCentreRemoveG3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G3\frmNatG3.resx">
+      <DependentUpon>frmNatG3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G3\frmNATSetupG3.resx">
+      <DependentUpon>frmNATSetupG3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G5\frmNatCentreChangeG5.resx">
+      <DependentUpon>frmNatCentreChangeG5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G5\frmNatCentreRemoveG5.resx">
+      <DependentUpon>frmNatCentreRemoveG5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G5\frmNatG5.resx">
+      <DependentUpon>frmNatG5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G5\frmNATSetupG5.resx">
+      <DependentUpon>frmNATSetupG5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G8\frmNat.resx">
+      <DependentUpon>frmNat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G8\frmNatCentreChange.resx">
+      <DependentUpon>frmNatCentreChange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G8\frmNatCentreRemove.resx">
+      <DependentUpon>frmNatCentreRemove.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\G8\frmNATSetup.resx">
+      <DependentUpon>frmNATSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\Reports\frmNatCandidateReport.resx">
+      <DependentUpon>frmNatCandidateReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NAT\Reports\rptCandidates.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCandidates1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutstandingDG.resx">
+      <DependentUpon>OutstandingDG.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WASSCE\Reports\crpWassceConfirmation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpWassceConfirmation.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WASSCE\Reports\frmWassceConfirmation.resx">
+      <DependentUpon>frmWassceConfirmation.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EmptyNATEntry.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GABECE.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\waec_logo_1.GIF" />
+    <None Include="Resources\waec3d5 - shade.JPG" />
+    <None Include="Resources\WAEC LOGO soft bevel.png" />
+    <None Include="Resources\yellow_and_black_hexagon_tile_seamless_background_pattern.jpg" />
+    <None Include="Resources\FloralPatternBackground.jpg" />
+    <None Include="Resources\Hay-Seamless-Background-1564492.jpg" />
+    <None Include="Resources\forest_green_argyle_background_pattern_seamless.gif" />
+    <None Include="Resources\purple_argyle_seamless_background_pattern.gif" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\4616555-367071-winter-wallpaper-pattern-seamless-background-vector.jpg" />
+    <None Include="Resources\1336897836-3890353-stock_vector_-_seamless_pattern_232-mb_seamless-pattern5_www.hqtexture.com[1].jpg" />
+    <None Include="Resources\red_celtic_squares_seamless_background_pattern.jpg" />
+    <None Include="Resources\WAEC LOGO soft bevel1.png" />
+    <None Include="Resources\581845029.jpg" />
+    <None Include="Resources\webtreats-paper-pattern-2-grey.jpg" />
+    <None Include="Resources\header_890x100 no background flag.png" />
+    <Content Include="WASSCE\db\wamaster.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Ok.png" />
+    <None Include="Resources\Close1.png" />
+    <None Include="Resources\Arrow2 - right.png" />
+    <None Include="Resources\Cancel16x16.png" />
+    <None Include="Resources\Ok16x16.png" />
+    <None Include="Resources\Delete red 16x16.png" />
+    <None Include="Resources\Ok Round Green 16x16.png" />
+    <None Include="Resources\Warning16x16.png" />
+    <None Include="Resources\User_Add_16x16.png" />
+    <None Include="Resources\User-del_16x16.png" />
+    <None Include="Resources\Left_16x16.png" />
+    <None Include="Resources\Overlay-edit_16x16.png" />
+    <None Include="Resources\eraser_16x16.png" />
+    <None Include="Resources\eraser1_16x16.png" />
+    <None Include="Resources\Right_16x16.png" />
+    <Content Include="Waec.ico" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Resources\small_waec.gif" />
+    <None Include="Resources\waec_logo_1.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

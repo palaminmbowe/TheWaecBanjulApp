@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ICTDUtilities.Exam" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Exam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.School" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAgAAAAIAAgAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.Sex" Collapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIAAgAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Sex.cs</FileName>
+      <NewMemberFileName>Objects\sex.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.Subject" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAQAAAAEAAAQAAAAEAAAAAA=</HashCode>
+      <FileName>Objects\Subject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.CandidateWassce" Collapsed="true">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAABBAAAAAAAAAASAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\CandidateWassce.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.Candidate" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>dAFAAGABAAAQBAgAgAQAAAAESAQQAQAEQCEABGEEQAA=</HashCode>
+      <FileName>Objects\Candidate.cs</FileName>
+      <NewMemberFileName>Objects\candidate.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICTDUtilities.Objects.Common">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEACAAAAAggAAQAQAAEAAACAAAAAwAAEAAAABABA=</HashCode>
+      <FileName>Objects\Common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ICTDUtilities.ExamType" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAABAAAAAAAAAAACAAAAEAQAAAAAAAE=</HashCode>
+      <FileName>Objects\ExamType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

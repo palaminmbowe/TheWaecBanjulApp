@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetNat3" targetNamespace="http://tempuri.org/DataSetNat3.xsd" xmlns:mstns="http://tempuri.org/DataSetNat3.xsd" xmlns="http://tempuri.org/DataSetNat3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="NATEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="NATEntryConnectionString (MySettings)" PropertyReference="ApplicationSettings.GABECE_NAT.My.MySettings.GlobalReference.Default.NATEntryConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryNat3EntryByUserByDateTableAdapter" GeneratorDataComponentClassName="qryNat3EntryByUserByDateTableAdapter" Name="qryNat3EntryByUserByDate" UserDataComponentName="qryNat3EntryByUserByDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NATEntryConnectionString (MySettings)" DbObjectName="qryNat3EntryByUserByDate" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ExamYear, userName, DateKeyed, TotalCandidates FROM qryNat3EntryByUserByDate</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ExamYear" DataSetColumn="ExamYear" />
+              <Mapping SourceColumn="userName" DataSetColumn="userName" />
+              <Mapping SourceColumn="DateKeyed" DataSetColumn="DateKeyed" />
+              <Mapping SourceColumn="TotalCandidates" DataSetColumn="TotalCandidates" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryNat3UsernamePcnameTableAdapter" GeneratorDataComponentClassName="qryNat3UsernamePcnameTableAdapter" Name="qryNat3UsernamePcname" UserDataComponentName="qryNat3UsernamePcnameTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NATEntryConnectionString (MySettings)" DbObjectName="qryNat3UsernamePcname" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ExamYear, pcName, userName
+FROM            qryNat3UsernamePcname
+ORDER BY ExamYear, userName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ExamYear" DataSetColumn="ExamYear" />
+              <Mapping SourceColumn="pcName" DataSetColumn="pcName" />
+              <Mapping SourceColumn="userName" DataSetColumn="userName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qryNat3TotalByUserTableAdapter" GeneratorDataComponentClassName="qryNat3TotalByUserTableAdapter" Name="qryNat3TotalByUser" UserDataComponentName="qryNat3TotalByUserTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NATEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM qryNat3TotalByUser</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="CurrentUsername" Precision="0" Scale="0" Size="0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ExamYear" DataSetColumn="ExamYear" />
+              <Mapping SourceColumn="userName" DataSetColumn="userName" />
+              <Mapping SourceColumn="DateKeyed" DataSetColumn="DateKeyed" />
+              <Mapping SourceColumn="TotalCandidates" DataSetColumn="TotalCandidates" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetNat3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetNat3" msprop:Generator_UserDSName="DataSetNat3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="qryNat3EntryByUserByDate" msprop:Generator_TableClassName="qryNat3EntryByUserByDateDataTable" msprop:Generator_TableVarName="tableqryNat3EntryByUserByDate" msprop:Generator_TablePropName="qryNat3EntryByUserByDate" msprop:Generator_RowDeletingName="qryNat3EntryByUserByDateRowDeleting" msprop:Generator_RowChangingName="qryNat3EntryByUserByDateRowChanging" msprop:Generator_RowEvHandlerName="qryNat3EntryByUserByDateRowChangeEventHandler" msprop:Generator_RowDeletedName="qryNat3EntryByUserByDateRowDeleted" msprop:Generator_UserTableName="qryNat3EntryByUserByDate" msprop:Generator_RowChangedName="qryNat3EntryByUserByDateRowChanged" msprop:Generator_RowEvArgName="qryNat3EntryByUserByDateRowChangeEvent" msprop:Generator_RowClassName="qryNat3EntryByUserByDateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ExamYear" msprop:Generator_ColumnVarNameInTable="columnExamYear" msprop:Generator_ColumnPropNameInRow="ExamYear" msprop:Generator_ColumnPropNameInTable="ExamYearColumn" msprop:Generator_UserColumnName="ExamYear" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="userName" msprop:Generator_ColumnVarNameInTable="columnuserName" msprop:Generator_ColumnPropNameInRow="userName" msprop:Generator_ColumnPropNameInTable="userNameColumn" msprop:Generator_UserColumnName="userName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateKeyed" msprop:Generator_ColumnVarNameInTable="columnDateKeyed" msprop:Generator_ColumnPropNameInRow="DateKeyed" msprop:Generator_ColumnPropNameInTable="DateKeyedColumn" msprop:Generator_UserColumnName="DateKeyed" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TotalCandidates" msprop:Generator_ColumnVarNameInTable="columnTotalCandidates" msprop:Generator_ColumnPropNameInRow="TotalCandidates" msprop:Generator_ColumnPropNameInTable="TotalCandidatesColumn" msprop:Generator_UserColumnName="TotalCandidates" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="qryNat3UsernamePcname" msprop:Generator_TableClassName="qryNat3UsernamePcnameDataTable" msprop:Generator_TableVarName="tableqryNat3UsernamePcname" msprop:Generator_TablePropName="qryNat3UsernamePcname" msprop:Generator_RowDeletingName="qryNat3UsernamePcnameRowDeleting" msprop:Generator_RowChangingName="qryNat3UsernamePcnameRowChanging" msprop:Generator_RowEvHandlerName="qryNat3UsernamePcnameRowChangeEventHandler" msprop:Generator_RowDeletedName="qryNat3UsernamePcnameRowDeleted" msprop:Generator_UserTableName="qryNat3UsernamePcname" msprop:Generator_RowChangedName="qryNat3UsernamePcnameRowChanged" msprop:Generator_RowEvArgName="qryNat3UsernamePcnameRowChangeEvent" msprop:Generator_RowClassName="qryNat3UsernamePcnameRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ExamYear" msprop:Generator_ColumnVarNameInTable="columnExamYear" msprop:Generator_ColumnPropNameInRow="ExamYear" msprop:Generator_ColumnPropNameInTable="ExamYearColumn" msprop:Generator_UserColumnName="ExamYear" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pcName" msprop:Generator_ColumnVarNameInTable="columnpcName" msprop:Generator_ColumnPropNameInRow="pcName" msprop:Generator_ColumnPropNameInTable="pcNameColumn" msprop:Generator_UserColumnName="pcName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="userName" msprop:Generator_ColumnVarNameInTable="columnuserName" msprop:Generator_ColumnPropNameInRow="userName" msprop:Generator_ColumnPropNameInTable="userNameColumn" msprop:Generator_UserColumnName="userName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="qryNat3TotalByUser" msprop:Generator_TableClassName="qryNat3TotalByUserDataTable" msprop:Generator_TableVarName="tableqryNat3TotalByUser" msprop:Generator_TablePropName="qryNat3TotalByUser" msprop:Generator_RowDeletingName="qryNat3TotalByUserRowDeleting" msprop:Generator_RowChangingName="qryNat3TotalByUserRowChanging" msprop:Generator_RowEvHandlerName="qryNat3TotalByUserRowChangeEventHandler" msprop:Generator_RowDeletedName="qryNat3TotalByUserRowDeleted" msprop:Generator_UserTableName="qryNat3TotalByUser" msprop:Generator_RowChangedName="qryNat3TotalByUserRowChanged" msprop:Generator_RowEvArgName="qryNat3TotalByUserRowChangeEvent" msprop:Generator_RowClassName="qryNat3TotalByUserRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ExamYear" msprop:Generator_ColumnVarNameInTable="columnExamYear" msprop:Generator_ColumnPropNameInRow="ExamYear" msprop:Generator_ColumnPropNameInTable="ExamYearColumn" msprop:Generator_UserColumnName="ExamYear" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="userName" msprop:Generator_ColumnVarNameInTable="columnuserName" msprop:Generator_ColumnPropNameInRow="userName" msprop:Generator_ColumnPropNameInTable="userNameColumn" msprop:Generator_UserColumnName="userName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateKeyed" msprop:Generator_ColumnVarNameInTable="columnDateKeyed" msprop:Generator_ColumnPropNameInRow="DateKeyed" msprop:Generator_ColumnPropNameInTable="DateKeyedColumn" msprop:Generator_UserColumnName="DateKeyed" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TotalCandidates" msprop:Generator_ColumnVarNameInTable="columnTotalCandidates" msprop:Generator_ColumnPropNameInRow="TotalCandidates" msprop:Generator_ColumnPropNameInTable="TotalCandidatesColumn" msprop:Generator_UserColumnName="TotalCandidates" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
